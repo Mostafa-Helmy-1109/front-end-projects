@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #222;
+}
+
+header {
+    height: 60px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header .icon {
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    padding: 7px 0;
+}
+
+header .icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+}
+
+header .icon span:first-child {
+    top: 0px;
+}
+
+header .icon span:nth-child(2) {
+    top: 18px;
+}
+
+header .icon span:last-child {
+    top: 38px;
+}
+
+header .icon:hover span {
+    top: 18px;
+}
+
+header .icon:hover span:nth-child(2) {
+    display: none;
+}
+
+header .icon:hover span:first-child {
+    transform: rotate(45deg);
+}
+
+header .icon:hover span:last-child {
+    transform: rotate(-45deg);
+}
